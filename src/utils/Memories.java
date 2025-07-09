@@ -65,7 +65,6 @@ public class Memories {
     public Set<Account> getAccounts () {
         JsonObject json = extractFile();
         if (json == null) return new LinkedHashSet<>();
-        ;
         if (json.isJsonNull() || !json.has("accounts")) return new LinkedHashSet<>();
 
         Type accountType = new TypeToken<Set<String>> () {}.getType();
